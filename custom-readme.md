@@ -14,6 +14,15 @@ npm install @supabase/supabase-js dotenv
 // exception
 throw new HttpException('message', 500)
 
+// type orm
+npm install @nestjs/typeorm typeorm mysql2
+
+npm install -g typeorm-model-generator
+
+typeorm-model-generator -h localhost -d study -u root -p 3306 -x 1111 -e mysql -o ./src
+
+// pipe 필요 시 추가
+
 
 ``` http-exception.filter.ts
 import { ExceptionFilter, Catch, ArgumentsHost, HttpException } from '@nestjs/common';
@@ -39,3 +48,19 @@ export class HttpExceptionFilter implements ExceptionFilter {
     }
 }
 ```
+
+// class validation 추가
+npm i --save class-validator class-transformer
+
+// 비밀번호 암호화
+npm i bcrypt
+npm install @types/bcrypt
+
+// 로그인 관련
+npm install @nestjs/jwt @nestjs/passport passport passport-jwt
+
+npm install --save @nestjs/jwt passport-jwt
+npm install --save-dev @types/passport-jwt
+
+// 스웨거 
+npm install --save @nestjs/swagger
